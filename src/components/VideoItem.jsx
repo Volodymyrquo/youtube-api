@@ -1,10 +1,13 @@
 import React from "react";
 import { Paper, Grid, Typography } from "@material-ui/core";
 
-const VideoItem = ({ video }) => {
+const VideoItem = ({ video, onVideoSelect }) => {
   return (
     <Grid item xs={12}>
-      <Paper style={{ display: "flex", alignItems: "center" }}>
+      <Paper
+        style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+        onClick={() => onVideoSelect(video)}
+      >
         <img
           style={{ marginRight: "20px" }}
           alt="thumbnail"
